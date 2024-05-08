@@ -1,5 +1,8 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+# story model
+/src/assets/story-model
+
 # dependencies
 /node_modules
 
