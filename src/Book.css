@@ -1,0 +1,19 @@
+@font-face {
+    font-family: enchantedLand;
+    src: url(./assets/Enchanted\ Land.otf);
+}
+
+.page-text {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    padding-right: 40px;
+    text-align: justify;
+    font-size: 5vh;
+    font-family: enchantedLand;
+}
+
+.PageImage {
+    width: 550px;
+    height: 733px;
+}

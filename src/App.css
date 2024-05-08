@@ -1,0 +1,43 @@
+body {
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.App {
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.Menu {
+  height: 100vh;
+}
+
+.MenuBg {
+  height: 95vh;
+  padding: 2.5vh;
+}
+
+.Input {
+  height:5vh;
+  position: absolute;
+  z-index: 1000;
+  top: 50vh;
+  left: 28vh;
+  transform: translate(-50%)
+}
+
+.Button {
+  height:5vh;
+  position: absolute;
+  z-index: 1000;
+  top: 85vh;
+  left: 28vh;
+  transform: translate(-50%)
+}
+
+.Book {
+  position: absolute;
+  top: 15%;
+  left: 65%;
+  transform: translate(-50%);
+}
