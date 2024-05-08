@@ -26,7 +26,6 @@ body {
   all: unset;
   height:5vh;
   position: absolute;
-  z-index: 1000;
   top: 45.5vh;
   left: 25vh;
   transform: translate(-50%);
@@ -48,7 +47,6 @@ body {
   all:unset;
   height:5vh;
   position: absolute;
-  z-index: 1000;
   top: 85vh;
   left: 27.5vh;
   transform: translate(-50%);
