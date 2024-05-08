@@ -6,6 +6,7 @@ import EmptyBook from './EmptyBook.js';
 
 import background from "./assets/background.png";
 import menu_bg from "./assets/menu_bg.png";
+import generate_button from "./assets/generate_button.png";
 
 eel.set_host("ws://localhost:8888");
 /*
@@ -48,8 +49,10 @@ function App() {
       <div className="Content">
         <div className="Menu">
           <img className="MenuBg" src={menu_bg} alt="menu" />
-          <input className="Input" type="text" placeholder="Enter a sentence" onChange={handleInputChange} />
-          <button className="Button" onClick={handleButtonClick}>Generate</button>
+          <textarea className="Input" placeholder="Enter your story here" onChange={handleInputChange} />
+          <button className="Button" onClick={handleButtonClick}>
+            <img className="ButtonImg" src={generate_button} alt="Generate" />
+          </button>
         </div>
         <div className="Book">
           {isLoading ? <EmptyBook/> : <TaleBook generatedContent={generatePages(generatedContent)} />}

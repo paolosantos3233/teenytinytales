@@ -1,3 +1,8 @@
+@font-face {
+  font-family: enchantedLand;
+  src: url(./assets/Enchanted\ Land.otf);
+}
+
 body {
   overflow: hidden;
   overflow-y: hidden;
@@ -18,21 +23,43 @@ body {
 }
 
 .Input {
+  all: unset;
   height:5vh;
   position: absolute;
   z-index: 1000;
-  top: 50vh;
+  top: 40vh;
   left: 28vh;
-  transform: translate(-50%)
+  transform: translate(-50%);
+  font-family: enchantedLand;
+  font-size: 4.5vh;
+  color: #ECECEC;
+  overflow: hidden;
+  overflow-wrap: break-word ;
+  height: 40vh;
+}
+
+.Input::placeholder{
+  color: #ECECEC;
 }
 
 .Button {
+  all:unset;
   height:5vh;
   position: absolute;
   z-index: 1000;
   top: 85vh;
   left: 28vh;
-  transform: translate(-50%)
+  transform: translate(-50%);
+  cursor: pointer;
+}
+
+.ButtonImg {
+  width: 17vh;
+  height: 7vh;
+}
+
+.ButtonImg:hover {
+  filter: brightness(90%);
 }
 
 .Book {
