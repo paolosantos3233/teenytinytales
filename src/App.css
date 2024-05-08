@@ -62,9 +62,28 @@ body {
   filter: brightness(90%);
 }
 
+@keyframes float {
+  0% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -10px); }
+  100% { transform: translate(-50%, 0); }
+}
+
 .Book {
   position: absolute;
   top: 15%;
   left: 65%;
   transform: translate(-50%);
+}
+
+.BookLoading {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+  pointer-events: none;
+  animation: float 2s ease-in-out infinite;
+}
+
+.Book, .BookLoading {
+  transition: all 1s ease-in-out;
 }

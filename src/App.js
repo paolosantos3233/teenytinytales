@@ -13,7 +13,6 @@ eel.set_host("ws://localhost:8888");
 
 TODO
 
-DESIGN BUTTON AND INPUTS
 WRITE INSTRUCTIONS
 ADD LOADING ANIMATIONS
 ADD BOOK ACCESSIBILITY BUTTONS
@@ -44,6 +43,7 @@ function App() {
     return lines.map((line, index) => <div key={index}>{line}</div>);
   }
 
+  let bookClassName = isLoading ? "BookLoading" : "Book";
   return (
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <div className="Content">
@@ -54,7 +54,7 @@ function App() {
             <img className="ButtonImg" src={generate_button} alt="Generate" />
           </button>
         </div>
-        <div className="Book">
+        <div className={bookClassName}>
           {isLoading ? <EmptyBook/> : <TaleBook generatedContent={generatePages(generatedContent)} />}
         </div>
       </div>
