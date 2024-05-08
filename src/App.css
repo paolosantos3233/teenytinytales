@@ -27,19 +27,21 @@ body {
   height:5vh;
   position: absolute;
   z-index: 1000;
-  top: 40vh;
-  left: 28vh;
+  top: 45.5vh;
+  left: 25vh;
   transform: translate(-50%);
   font-family: enchantedLand;
-  font-size: 4.5vh;
-  color: #ECECEC;
+  font-size: 3.5vh;
+  color: #000;
+  opacity: 0.85;
   overflow: hidden;
   overflow-wrap: break-word ;
-  height: 40vh;
+  height: 30vh;
+  width: 18vh
 }
 
 .Input::placeholder{
-  color: #ECECEC;
+  color: #000;
 }
 
 .Button {
@@ -48,7 +50,7 @@ body {
   position: absolute;
   z-index: 1000;
   top: 85vh;
-  left: 28vh;
+  left: 27.5vh;
   transform: translate(-50%);
   cursor: pointer;
 }
