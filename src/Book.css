@@ -11,6 +11,8 @@
     text-align: justify;
     font-size: 5vh;
     font-family: enchantedLand;
+    height: 650px;
+    overflow-y: hidden;
 }
 
 .PageImage {
