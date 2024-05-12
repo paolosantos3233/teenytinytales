@@ -49,7 +49,7 @@ function App() {
       <div className="Content">
         <div className="Menu">
           <img className="MenuBg" src={menu_bg} alt="menu" />
-          <textarea className="Input" placeholder="Enter your story here..." onChange={handleInputChange} />
+          <textarea className="Input" placeholder="Start your story here..." onChange={handleInputChange} />
           <button className="Button" onClick={handleButtonClick}>
             <img className="ButtonImg" src={generate_button} alt="Generate" />
           </button>

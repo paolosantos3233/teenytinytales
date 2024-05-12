@@ -66,8 +66,8 @@ function EmptyBook(props) {
         >   
             <BookCover/>
             <BackCover/>
-            <RightPage textContent='Putangina mo'/>
-            <LeftPage textContent='WIGGA WIGgA WIGGA'/>
+            <RightPage/>
+            <LeftPage/>
             <BackCover1/>
             <BackCover/>
         </HTMLFlipBook>
