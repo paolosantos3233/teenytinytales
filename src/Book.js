@@ -1,6 +1,6 @@
 import './Book.css';
 import HTMLFlipBook from "react-pageflip";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import book_cover from "./assets/book_cover.png";
 import back_cover from "./assets/book_cover_back.png";
@@ -56,8 +56,23 @@ const RightPage = React.forwardRef((props, ref) => {
 
 function TaleBook(props) {
 
-    if (!props.generatedContent || !props.generatedContent.length) {
-        return null;
+    const book = useRef();
+
+    useEffect(() => {
+        const delay = 1000;
+        const timer = setTimeout(() => {
+            nextButtonClick();
+        }, delay);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    const nextButtonClick = () => {
+        book.current.pageFlip().flipNext();
+    };
+
+    const prevButtonClick = () => {
+        book.current.pageFlip().flipPrev();
     }
 
     const pages = props.generatedContent.map((content, index) => {
@@ -69,19 +84,28 @@ function TaleBook(props) {
     });
 
     return (
-        <HTMLFlipBook
-            width={550}
-            height={733}
-            maxShadowOpacity={0.5}
-            showCover={true}
-            usePortrait={false}
-        >   
-            <BookCover/>
-            <BackCover/>
-            {pages}
-            <BackCover1/>
-            <BackCover/>
-        </HTMLFlipBook>
+        <>
+            <HTMLFlipBook
+                width={550}
+                height={733}
+                maxShadowOpacity={0.5}
+                showCover={true}
+                usePortrait={false}
+                ref={book}
+            >   
+                <BookCover/>
+                <BackCover/>
+                {pages}
+                <BackCover1/>
+                <BackCover/>
+            </HTMLFlipBook>
+            <button type="button" onClick={prevButtonClick}>
+                Previous page
+            </button>
+            <button type="button" onClick={nextButtonClick}>
+                Next page
+            </button>
+        </>
     );
 }
 

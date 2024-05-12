@@ -55,7 +55,6 @@ const RightPage = React.forwardRef((props, ref) => {
 });
 
 function EmptyBook(props) {
-
     return (
         <HTMLFlipBook
             width={550}
@@ -63,6 +62,7 @@ function EmptyBook(props) {
             maxShadowOpacity={0.5}
             showCover={true}
             usePortrait={false}
+            showPageCorners={false}
         >   
             <BookCover/>
             <BackCover/>
