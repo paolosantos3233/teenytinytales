@@ -91,6 +91,7 @@ function TaleBook(props) {
                 maxShadowOpacity={0.5}
                 showCover={true}
                 usePortrait={false}
+                showPageCorners={false}
                 ref={book}
             >   
                 <BookCover/>
@@ -99,12 +100,14 @@ function TaleBook(props) {
                 <BackCover1/>
                 <BackCover/>
             </HTMLFlipBook>
-            <button type="button" onClick={prevButtonClick}>
-                Previous page
-            </button>
-            <button type="button" onClick={nextButtonClick}>
-                Next page
-            </button>
+            <div className='buttonContainer'>
+                <button className="prevBt" type="button" onClick={prevButtonClick}>
+                    Previous Page
+                </button>
+                <button className="nextBt"type="button" onClick={nextButtonClick}>
+                    Next Page
+                </button>
+            </div>
         </>
     );
 }

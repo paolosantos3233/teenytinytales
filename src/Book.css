@@ -19,3 +19,35 @@
     width: 550px;
     height: 733px;
 }
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    animation: delayButtons 2s;
+}
+
+@keyframes delayButtons {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.nextBt, .prevBt {
+    all: unset;
+    padding: 1vh;
+    font-family: enchantedLand;
+    font-size: 3vh;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+}
+
+.nextBt:hover, .prevBt:hover {
+    text-shadow: 2px 2px 4px rgba(134, 133, 133, 0.5);
+}
