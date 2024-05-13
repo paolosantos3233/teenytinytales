@@ -51,3 +51,30 @@
 .nextBt:hover, .prevBt:hover {
     text-shadow: 2px 2px 4px rgba(134, 133, 133, 0.5);
 }
+
+.emptyBook {
+    display: none;
+}
+
+.emptyBookLoading {
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    font-family: enchantedLand;
+    font-size: 5vh;
+    color: #000;
+    opacity: 0.85;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

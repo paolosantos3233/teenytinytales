@@ -55,22 +55,26 @@ const RightPage = React.forwardRef((props, ref) => {
 });
 
 function EmptyBook(props) {
+    console.log(props.emptyBookClassName);
     return (
-        <HTMLFlipBook
-            width={550}
-            height={733}
-            maxShadowOpacity={0.5}
-            showCover={true}
-            usePortrait={false}
-            showPageCorners={false}
-        >   
-            <BookCover/>
-            <BackCover/>
-            <RightPage/>
-            <LeftPage/>
-            <BackCover1/>
-            <BackCover/>
-        </HTMLFlipBook>
+        <>
+            <HTMLFlipBook
+                width={550}
+                height={733}
+                maxShadowOpacity={0.5}
+                showCover={true}
+                usePortrait={false}
+                showPageCorners={false}
+            >   
+                <BookCover/>
+                <BackCover/>
+                <RightPage/>
+                <LeftPage/>
+                <BackCover1/>
+                <BackCover/>
+            </HTMLFlipBook>
+            <div className={props.emptyBookClassName}>Loading...</div> 
+        </>
     );
 }
 

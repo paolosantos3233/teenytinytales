@@ -13,15 +13,15 @@ eel.set_host("ws://localhost:8888");
 
 TODO
 
-WRITE INSTRUCTIONS
-MAYBE MAKE LOADING ANIMATION FOR GENERATION
-ADD BOOK ACCESSIBILITY BUTTONS
+WRITE INSTRUCTIONS BOOK
+DESIGN ACCESSIBILITY BUTTONS
 POLISH OVERALL FRONTEND
 
 */
 function App() {
   const [generatedContent, setGeneratedContent] = useState("Enter prompt to start...\n");
   const [isLoading, setIsLoading] = useState(true);
+  const [loadingStart, setloadingStart] = useState(false);
   const [prompt, setPrompt] = useState("");
 
   const handleInputChange = (event) => {
@@ -31,9 +31,11 @@ function App() {
   const handleButtonClick = () => {
     setIsLoading(true);
     if (prompt !== "") {
+      setloadingStart(true);
       eel.generate(prompt)().then(result => {
         setGeneratedContent(result);
         setIsLoading(false);
+        setloadingStart(false);
       });
     }
   }
@@ -44,6 +46,7 @@ function App() {
   }
 
   let bookClassName = isLoading ? "BookLoading" : "Book";
+  let emptyBookClassName = loadingStart ? "emptyBookLoading" : "emptyBook";
   return (
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <div className="Content">
@@ -55,7 +58,7 @@ function App() {
           </button>
         </div>
         <div className={bookClassName}>
-          {isLoading ? <EmptyBook/> : <TaleBook generatedContent={generatePages(generatedContent)} />}
+          {isLoading ? <EmptyBook emptyBookClassName={emptyBookClassName}/> : <TaleBook generatedContent={generatePages(generatedContent)} />}
         </div>
       </div>
     </div>

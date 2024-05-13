@@ -61,7 +61,7 @@ function TaleBook(props) {
     useEffect(() => {
         const delay = 1000;
         const timer = setTimeout(() => {
-            nextButtonClick();
+            book.current.pageFlip().flipNext();
         }, delay);
 
         return () => clearTimeout(timer);
