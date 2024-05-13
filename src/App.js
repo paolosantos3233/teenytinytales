@@ -13,11 +13,13 @@ eel.set_host("ws://localhost:8888");
 
 TODO
 
-WRITE INSTRUCTIONS BOOK
+RESET ANIMATION WHEN GENERATING NEW CONTENT
 DESIGN ACCESSIBILITY BUTTONS
 POLISH OVERALL FRONTEND
 
 */
+
+
 function App() {
   const [generatedContent, setGeneratedContent] = useState("Enter prompt to start...\n");
   const [isLoading, setIsLoading] = useState(true);
