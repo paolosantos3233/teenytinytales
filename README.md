@@ -23,5 +23,5 @@ $ yarn start
 ## Model
 
 ```
-$ https://drive.google.com/file/d/13CZpL6V9p3TK_BRwWYGk09MGLd0pmpuo/view?usp=sharing
+https://drive.google.com/file/d/13CZpL6V9p3TK_BRwWYGk09MGLd0pmpuo/view?usp=sharing
 ```
