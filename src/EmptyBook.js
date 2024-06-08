@@ -73,7 +73,7 @@ function EmptyBook(props) {
                 <BackCover1/>
                 <BackCover/>
             </HTMLFlipBook>
-            <div className={props.emptyBookClassName}>Loading...</div> 
+            <div className={props.emptyBookClassName}>Generating...</div> 
         </>
     );
 }

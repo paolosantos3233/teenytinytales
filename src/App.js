@@ -9,16 +9,6 @@ import menu_bg from "./assets/menu_bg.png";
 import generate_button from "./assets/generate_button.png";
 
 eel.set_host("ws://localhost:8888");
-/*
-
-TODO
-
-RESET ANIMATION WHEN GENERATING NEW CONTENT
-DESIGN ACCESSIBILITY BUTTONS
-POLISH OVERALL FRONTEND
-
-*/
-
 
 function App() {
   const [generatedContent, setGeneratedContent] = useState("Enter prompt to start...\n");
