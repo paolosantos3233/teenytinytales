@@ -1,4 +1,3 @@
-# coding: utf-8
 import eel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
