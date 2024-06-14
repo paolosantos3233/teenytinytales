@@ -10,6 +10,7 @@ You’ll need to have Python >= 3.6, Eel, pyinstaller, transformers.
 $ python3 -m pip install eel
 $ python3 -m pip install pyinstaller
 $ python3 -m pip install transformers
+$ python3 -m pip install torch
 ```
 
 ## Develop on GUI
