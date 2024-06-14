@@ -25,4 +25,5 @@ $ yarn start
 
 ```
 https://drive.google.com/file/d/13CZpL6V9p3TK_BRwWYGk09MGLd0pmpuo/view?usp=sharing
+Put story-model folder to src/assets/
 ```
