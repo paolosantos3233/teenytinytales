@@ -1,6 +1,6 @@
 # Teeny-Tiny Tales: A Short Story Generator
 
-![](./sample.png)
+![](./sample.gif)
 
 ## Install
 
